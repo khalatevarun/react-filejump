@@ -1,0 +1,56 @@
+{
+    "name": "react-filejump",
+    "version": "0.1.0",
+    "description": "Navigate to React component source files with Alt+Click",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs",
+            "default": "./dist/index.js"
+        },
+        "./server": "./dist/server.js"
+    },
+    "bin": {
+        "filejump-server": "./dist/server.js"
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "scripts": {
+        "dev": "pnpm tsup --watch",
+        "build": "pnpm tsup",
+        "prepublishOnly": "pnpm build"
+    },
+    "keywords": [
+        "react",
+        "developer-tools",
+        "source-map",
+        "navigation",
+        "component",
+        "debugging"
+    ],
+    "author": "varunhnk",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "peerDependencies": {
+        "react": ">=16.8.0"
+    },
+    "devDependencies": {
+        "@types/node": "^25.0.3",
+        "tsup": "^8.5.1",
+        "typescript": "^5.9.3"
+    },
+    "dependencies": {
+        "bippy": "^0.5.27",
+        "launch-editor": "^2.12.0"
+    }
+}
